@@ -55,8 +55,11 @@ personas.forEach(function(persona){
 console.log("Buscando a persona con DNI: %s", new Dni(86594256,"P").toString());
 var filtrado = personas.filter(persona=>persona.getDni().equals( new Dni(86594256,"P"))).pop();
 console.log ("Encontrado:\n" + filtrado.toString() +"\n");
+filtrado.setDirecciones([]);
 filtrado.getDirecciones().push(new Direccion("De la flor", 98,76,"p",52524,"Barcelona","Barcelona"));
+filtrado.setTelefonos([]);
 filtrado.getTelefonos().push(new Telefono("Particular" , 678987868));
+filtrado.setMails([]);
 filtrado.getMails().push(new Mail("personal","periquitotoflama@gmail.com"));
 personas.forEach;
 
